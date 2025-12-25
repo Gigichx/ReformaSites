@@ -1,11 +1,862 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Laboratorio Compagnia Teatrale Reforma - Teatro, cultura e inclusione">
+    <title>Laboratorio Compagnia Teatrale Reforma</title>
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    
+    <!-- HEADER & NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <h1>Reforma</h1>
+                    <span>Teatro & Cultura</span>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#produzioni" class="nav-link">Produzioni</a></li>
+                    <li><a href="#eventi" class="nav-link">Eventi</a></li>
+                    <li><a href="#progetti" class="nav-link">Progetti</a></li>
+                    <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
+                    <li><a href="#contatti" class="nav-link">Contatti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Laboratorio Compagnia Teatrale Reforma</h1>
+            <p class="hero-subtitle">Dove la passione per il teatro incontra l'inclusione sociale e la promozione
+                culturale del territorio</p>
+            <div class="hero-cta">
+                <a href="#produzioni" class="btn btn-primary">Scopri gli Spettacoli</a>
+                <a href="#contatti" class="btn btn-secondary">Iscriviti ai Laboratori</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- EVENTI IN EVIDENZA CAROUSEL -->
+    <section class="featured-events">
+        <div class="container">
+            <h2 class="section-title">Prossimi Eventi in Evidenza</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" id="prevBtn" aria-label="Precedente">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Event Card 1 -->
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=400&fit=crop"
+                                    alt="Spettacolo teatrale">
+                                <span class="event-badge">In Programma</span>
+                            </div>
+                            <div class="event-content">
+                                <h3>Il Grande Gatsby</h3>
+                                <p class="event-date"><i class="far fa-calendar"></i> 15 Gennaio 2026</p>
+                                <p class="event-location"><i class="fas fa-map-marker-alt"></i> Teatro Comunale di Bari
+                                </p>
+                                <p class="event-description">Un viaggio nell'epoca d'oro americana, tra lusso e
+                                    disillusione</p>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 2 -->
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&h=400&fit=crop"
+                                    alt="Teatro per bambini">
+                                <span class="event-badge badge-kids">Per Bambini</span>
+                            </div>
+                            <div class="event-content">
+                                <h3>Il Piccolo Principe</h3>
+                                <p class="event-date"><i class="far fa-calendar"></i> 22 Gennaio 2026</p>
+                                <p class="event-location"><i class="fas fa-map-marker-alt"></i> Auditorium San Giuseppe
+                                </p>
+                                <p class="event-description">Un racconto poetico che incanta grandi e piccini</p>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 3 -->
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop"
+                                    alt="Teatro popolare">
+                                <span class="event-badge badge-popular">Teatro Popolare</span>
+                            </div>
+                            <div class="event-content">
+                                <h3>Storie di Puglia</h3>
+                                <p class="event-date"><i class="far fa-calendar"></i> 29 Gennaio 2026</p>
+                                <p class="event-location"><i class="fas fa-map-marker-alt"></i> Piazza del Ferrarese</p>
+                                <p class="event-description">Tradizioni, dialetto e memoria collettiva del nostro
+                                    territorio</p>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 4 -->
+                        <div class="event-card">
+                            <div class="event-image">
+                                <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=600&h=400&fit=crop"
+                                    alt="Laboratorio teatrale">
+                                <span class="event-badge badge-workshop">Laboratorio</span>
+                            </div>
+                            <div class="event-content">
+                                <h3>Workshop di Improvvisazione</h3>
+                                <p class="event-date"><i class="far fa-calendar"></i> 5 Febbraio 2026</p>
+                                <p class="event-location"><i class="fas fa-map-marker-alt"></i> Sede Reforma</p>
+                                <p class="event-description">Corso intensivo di tecniche di improvvisazione teatrale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" id="nextBtn" aria-label="Successivo">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- QUICK ACCESS CARDS -->
+    <section class="quick-access">
+        <div class="container">
+            <div class="quick-cards">
+                <a href="#produzioni" class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-theater-masks"></i></div>
+                    <h3>Produzioni Teatrali</h3>
+                    <p>Scopri i nostri spettacoli per adulti, bambini e teatro popolare</p>
+                </a>
+                <a href="#eventi" class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Eventi</h3>
+                    <p>Tutti gli appuntamenti e le rassegne in programma</p>
+                </a>
+                <a href="#progetti" class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Progetti Culturali</h3>
+                    <p>Iniziative di inclusione e promozione del territorio</p>
+                </a>
+                <a href="#chi-siamo" class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-users"></i></div>
+                    <h3>Chi Siamo</h3>
+                    <p>La nostra storia, il team e i nostri valori</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUZIONI TEATRALI -->
+    <section id="produzioni" class="produzioni">
+        <div class="container">
+            <h2 class="section-title">Produzioni Teatrali</h2>
+            <p class="section-intro">La Compagnia Teatrale Reforma porta in scena storie che emozionano, coinvolgono e
+                fanno riflettere. Le nostre produzioni spaziano dal teatro classico a quello contemporaneo, con
+                un'attenzione particolare all'inclusività e alla valorizzazione del territorio.</p>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="adulti">Teatro per Adulti</button>
+                <button class="tab-btn" data-tab="bambini">Teatro per Bambini</button>
+                <button class="tab-btn" data-tab="popolare">Teatro Popolare</button>
+            </div>
+
+            <div class="tab-content active" id="adulti">
+                <div class="produzioni-grid">
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484ae?w=600&h=400&fit=crop"
+                                alt="Romeo e Giulietta">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>Romeo e Giulietta</h3>
+                            <p class="produzione-type">Dramma Classico</p>
+                            <p>Una rilettura moderna del capolavoro shakespeariano, ambientata nella Bari contemporanea.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop"
+                                alt="Aspettando Godot">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>Aspettando Godot</h3>
+                            <p class="produzione-type">Teatro dell'Assurdo</p>
+                            <p>L'opera simbolo di Beckett che esplora l'esistenza umana e l'attesa.</p>
+                        </div>
+                    </div>
+
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop"
+                                alt="La Locandiera">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>La Locandiera</h3>
+                            <p class="produzione-type">Commedia</p>
+                            <p>La brillante commedia goldoniana in chiave contemporanea e ironica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bambini">
+                <div class="produzioni-grid">
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&h=400&fit=crop"
+                                alt="Alice nel Paese delle Meraviglie">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>Alice nel Paese delle Meraviglie</h3>
+                            <p class="produzione-type">Fiaba Interattiva</p>
+                            <p>Un viaggio fantastico che coinvolge attivamente i piccoli spettatori.</p>
+                        </div>
+                    </div>
+
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&h=400&fit=crop"
+                                alt="Il Piccolo Principe">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>Il Piccolo Principe</h3>
+                            <p class="produzione-type">Racconto Poetico</p>
+                            <p>Un viaggio tra stelle e pianeti alla scoperta dell'amicizia.</p>
+                        </div>
+                    </div>
+
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1533167649158-6d508895b680?w=600&h=400&fit=crop"
+                                alt="Pinocchio">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>Le Avventure di Pinocchio</h3>
+                            <p class="produzione-type">Fiaba Classica</p>
+                            <p>Il burattino più famoso del mondo in una versione musicale e coinvolgente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="popolare">
+                <div class="produzioni-grid">
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop"
+                                alt="Storie di Puglia">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>Storie di Puglia</h3>
+                            <p class="produzione-type">Teatro di Strada</p>
+                            <p>Racconti della tradizione popolare pugliese tra dialetto e memoria.</p>
+                        </div>
+                    </div>
+
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop"
+                                alt="La Commedia degli Zanni">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>La Commedia degli Zanni</h3>
+                            <p class="produzione-type">Commedia dell'Arte</p>
+                            <p>Maschere, improvvisazione e satira nella grande tradizione italiana.</p>
+                        </div>
+                    </div>
+
+                    <div class="produzione-card">
+                        <div class="produzione-image">
+                            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop"
+                                alt="Festa in Piazza">
+                            <div class="produzione-overlay">
+                                <button class="btn-view">Scopri di più</button>
+                            </div>
+                        </div>
+                        <div class="produzione-info">
+                            <h3>Festa in Piazza</h3>
+                            <p class="produzione-type">Teatro Partecipato</p>
+                            <p>Spettacolo itinerante che coinvolge la comunità locale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTI -->
+    <section id="eventi" class="eventi">
+        <div class="container">
+            <h2 class="section-title">Eventi & Calendario</h2>
+
+            <div class="eventi-filters">
+                <button class="filter-btn active" data-filter="tutti">Tutti</button>
+                <button class="filter-btn" data-filter="spettacoli">Spettacoli</button>
+                <button class="filter-btn" data-filter="laboratori">Laboratori</button>
+                <button class="filter-btn" data-filter="rassegne">Rassegne</button>
+            </div>
+
+            <div class="eventi-grid" id="eventiGrid">
+                <div class="evento-item" data-category="spettacoli">
+                    <div class="evento-date-badge">
+                        <span class="day">15</span>
+                        <span class="month">GEN</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=400&fit=crop"
+                            alt="Il Grande Gatsby">
+                    </div>
+                    <div class="evento-details">
+                        <h3>Il Grande Gatsby</h3>
+                        <p class="evento-location"><i class="fas fa-map-marker-alt"></i> Teatro Comunale, Bari</p>
+                        <p class="evento-time"><i class="far fa-clock"></i> 21:00</p>
+                        <p class="evento-desc">Dramma ambientato negli anni ruggenti dell'America</p>
+                        <a href="#" class="btn-evento">Info e Biglietti</a>
+                    </div>
+                </div>
+
+                <div class="evento-item" data-category="laboratori">
+                    <div class="evento-date-badge">
+                        <span class="day">18</span>
+                        <span class="month">GEN</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=600&h=400&fit=crop"
+                            alt="Workshop Improvvisazione">
+                    </div>
+                    <div class="evento-details">
+                        <h3>Workshop di Improvvisazione</h3>
+                        <p class="evento-location"><i class="fas fa-map-marker-alt"></i> Sede Reforma</p>
+                        <p class="evento-time"><i class="far fa-clock"></i> 15:00 - 18:00</p>
+                        <p class="evento-desc">Corso intensivo di tecniche di improvvisazione teatrale</p>
+                        <a href="#" class="btn-evento">Iscriviti</a>
+                    </div>
+                </div>
+
+                <div class="evento-item" data-category="spettacoli">
+                    <div class="evento-date-badge">
+                        <span class="day">22</span>
+                        <span class="month">GEN</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&h=400&fit=crop"
+                            alt="Il Piccolo Principe">
+                    </div>
+                    <div class="evento-details">
+                        <h3>Il Piccolo Principe</h3>
+                        <p class="evento-location"><i class="fas fa-map-marker-alt"></i> Auditorium San Giuseppe</p>
+                        <p class="evento-time"><i class="far fa-clock"></i> 17:00</p>
+                        <p class="evento-desc">Spettacolo per famiglie tratto dal capolavoro di Saint-Exupéry</p>
+                        <a href="#" class="btn-evento">Info e Biglietti</a>
+                    </div>
+                </div>
+
+                <div class="evento-item" data-category="rassegne">
+                    <div class="evento-date-badge">
+                        <span class="day">25</span>
+                        <span class="month">GEN</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop"
+                            alt="Rassegna Teatro Territorio">
+                    </div>
+                    <div class="evento-details">
+                        <h3>Rassegna "Teatro e Territorio"</h3>
+                        <p class="evento-location"><i class="fas fa-map-marker-alt"></i> Piazza del Ferrarese</p>
+                        <p class="evento-time"><i class="far fa-clock"></i> 19:00</p>
+                        <p class="evento-desc">Prima serata della rassegna dedicata al teatro pugliese</p>
+                        <a href="#" class="btn-evento">Programma</a>
+                    </div>
+                </div>
+
+                <div class="evento-item" data-category="spettacoli">
+                    <div class="evento-date-badge">
+                        <span class="day">29</span>
+                        <span class="month">GEN</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484ae?w=600&h=400&fit=crop"
+                            alt="Romeo e Giulietta">
+                    </div>
+                    <div class="evento-details">
+                        <h3>Romeo e Giulietta</h3>
+                        <p class="evento-location"><i class="fas fa-map-marker-alt"></i> Teatro Piccinni</p>
+                        <p class="evento-time"><i class="far fa-clock"></i> 20:30</p>
+                        <p class="evento-desc">Rilettura moderna del dramma shakespeariano</p>
+                        <a href="#" class="btn-evento">Info e Biglietti</a>
+                    </div>
+                </div>
+
+                <div class="evento-item" data-category="laboratori">
+                    <div class="evento-date-badge">
+                        <span class="day">05</span>
+                        <span class="month">FEB</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&h=400&fit=crop"
+                            alt="Laboratorio Bambini">
+                    </div>
+                    <div class="evento-details">
+                        <h3>Laboratorio Teatrale Bambini</h3>
+                        <p class="evento-location"><i class="fas fa-map-marker-alt"></i> Sede Reforma</p>
+                        <p class="evento-time"><i class="far fa-clock"></i> 16:00 - 18:00</p>
+                        <p class="evento-desc">Ciclo di incontri per bambini dai 6 ai 12 anni</p>
+                        <a href="#" class="btn-evento">Iscriviti</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGETTI CULTURALI -->
+    <section id="progetti" class="progetti">
+        <div class="container">
+            <h2 class="section-title">Progetti Culturali</h2>
+            <p class="section-intro">Il nostro impegno va oltre il palcoscenico: attraverso progetti di inclusione
+                sociale, valorizzazione del territorio e collaborazioni con enti pubblici e privati, lavoriamo per
+                rendere il teatro uno strumento di crescita e coesione per tutta la comunità.</p>
+
+            <div class="progetti-grid">
+                <div class="progetto-card">
+                    <div class="progetto-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="progetto-content">
+                        <h3>Teatro Inclusivo</h3>
+                        <p class="progetto-subtitle">Progetti di inclusione sociale</p>
+                        <p>Laboratori teatrali dedicati a persone con disabilità, detenuti e comunità fragili. Il teatro
+                            come strumento di integrazione e riscatto sociale.</p>
+                        <div class="progetto-partners">
+                            <strong>Partner:</strong> ASL Bari, Comune di Bari, Carcere di Bari
+                        </div>
+                        <div class="progetto-results">
+                            <span class="result-item"><i class="fas fa-users"></i> 150+ partecipanti</span>
+                            <span class="result-item"><i class="fas fa-trophy"></i> 3 spettacoli realizzati</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progetto-card">
+                    <div class="progetto-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="progetto-content">
+                        <h3>Radici di Puglia</h3>
+                        <p class="progetto-subtitle">Promozione del territorio</p>
+                        <p>Valorizzazione delle tradizioni locali attraverso spettacoli itineranti, raccolta di
+                            testimonianze e archivio della memoria collettiva pugliese.</p>
+                        <div class="progetto-partners">
+                            <strong>Partner:</strong> Regione Puglia, Pro Loco, Musei territoriali
+                        </div>
+                        <div class="progetto-results">
+                            <span class="result-item"><i class="fas fa-map-marked-alt"></i> 25 comuni coinvolti</span>
+                            <span class="result-item"><i class="fas fa-book"></i> Archivio digitale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progetto-card">
+                    <div class="progetto-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="progetto-content">
+                        <h3>Teatro a Scuola</h3>
+                        <p class="progetto-subtitle">Educazione e formazione</p>
+                        <p>Percorsi didattici nelle scuole di ogni ordine e grado per avvicinare i giovani al teatro
+                            attraverso laboratori, spettacoli e incontri con gli artisti.</p>
+                        <div class="progetto-partners">
+                            <strong>Partner:</strong> Ufficio Scolastico Regionale, IC Bari
+                        </div>
+                        <div class="progetto-results">
+                            <span class="result-item"><i class="fas fa-school"></i> 30 scuole</span>
+                            <span class="result-item"><i class="fas fa-child"></i> 2000+ studenti</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progetto-card">
+                    <div class="progetto-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="progetto-content">
+                        <h3>Rete Teatrale Pugliese</h3>
+                        <p class="progetto-subtitle">Collaborazioni artistiche</p>
+                        <p>Network di compagnie teatrali per la co-produzione di spettacoli, scambio di competenze e
+                            promozione del teatro pugliese a livello nazionale.</p>
+                        <div class="progetto-partners">
+                            <strong>Partner:</strong> 15 compagnie teatrali pugliesi
+                        </div>
+                        <div class="progetto-results">
+                            <span class="result-item"><i class="fas fa-theater-masks"></i> 8 co-produzioni</span>
+                            <span class="result-item"><i class="fas fa-award"></i> 5 festival</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHI SIAMO & GALLERY -->
+    <section id="chi-siamo" class="chi-siamo">
+        <div class="container">
+            <h2 class="section-title">Chi Siamo</h2>
+
+            <div class="chi-siamo-content">
+                <div class="storia">
+                    <h3>La Nostra Storia</h3>
+                    <p>Nata nel 2005 dalla passione di un gruppo di artisti baresi, la Compagnia Teatrale Reforma è
+                        diventata negli anni un punto di riferimento per il teatro in Puglia. Il nostro nome, "Reforma",
+                        rappresenta il desiderio di rinnovare e riformare il linguaggio teatrale, mantenendo vive le
+                        radici della tradizione.</p>
+                    <p>Oltre 100 produzioni, migliaia di spettatori coinvolti e numerosi riconoscimenti testimoniano il
+                        nostro impegno costante per un teatro di qualità, accessibile e inclusivo.</p>
+                </div>
+
+                <div class="mission-values">
+                    <div class="mission-box">
+                        <h4><i class="fas fa-bullseye"></i> La Nostra Missione</h4>
+                        <p>Portare il teatro in ogni angolo del territorio, rendendolo strumento di crescita culturale,
+                            inclusione sociale e valorizzazione delle identità locali.</p>
+                    </div>
+                    <div class="values-box">
+                        <h4><i class="fas fa-star"></i> I Nostri Valori</h4>
+                        <ul>
+                            <li>Inclusività e accessibilità</li>
+                            <li>Qualità artistica</li>
+                            <li>Radicamento territoriale</li>
+                            <li>Innovazione nella tradizione</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEAM -->
+            <div class="team">
+                <h3 class="team-title">Il Nostro Team</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                                alt="Marco Rossi">
+                        </div>
+                        <h4>Marco Rossi</h4>
+                        <p class="member-role">Direttore Artistico</p>
+                        <p class="member-bio">Regista e attore con 25 anni di esperienza, ha studiato alla Scuola del
+                            Piccolo Teatro di Milano.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+                                alt="Laura Bianchi">
+                        </div>
+                        <h4>Laura Bianchi</h4>
+                        <p class="member-role">Coordinatrice Progetti</p>
+                        <p class="member-bio">Esperta in progettazione culturale e inclusione sociale attraverso le arti
+                            performative.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+                                alt="Giuseppe Verdi">
+                        </div>
+                        <h4>Giuseppe Verdi</h4>
+                        <p class="member-role">Responsabile Laboratori</p>
+                        <p class="member-bio">Attore e formatore specializzato in teatro sociale e pedagogia teatrale.
+                        </p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                                alt="Anna Greco">
+                        </div>
+                        <h4>Anna Greco</h4>
+                        <p class="member-role">Scenografa</p>
+                        <p class="member-bio">Designer e scenografa, crea mondi visivi che arricchiscono ogni
+                            produzione.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="gallery-section">
+                <h3 class="gallery-title">Gallery</h3>
+                <div class="gallery-filters">
+                    <button class="gallery-filter-btn active" data-filter-gallery="tutti">Tutti</button>
+                    <button class="gallery-filter-btn" data-filter-gallery="spettacoli">Spettacoli</button>
+                    <button class="gallery-filter-btn" data-filter-gallery="laboratori">Laboratori</button>
+                    <button class="gallery-filter-btn" data-filter-gallery="eventi">Eventi</button>
+                </div>
+
+                <div class="gallery-grid limited" id="galleryGrid">
+                    <div class="gallery-item" data-category-gallery="spettacoli">
+                        <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=600&fit=crop"
+                            alt="Spettacolo teatrale" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category-gallery="laboratori">
+                        <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=600&h=600&fit=crop"
+                            alt="Laboratorio" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category-gallery="spettacoli">
+                        <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&h=600&fit=crop"
+                            alt="Spettacolo bambini" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category-gallery="eventi">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=600&fit=crop"
+                            alt="Evento" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category-gallery="spettacoli">
+                        <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484ae?w=600&h=600&fit=crop"
+                            alt="Romeo e Giulietta" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category-gallery="laboratori">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&h=600&fit=crop"
+                            alt="Laboratorio bambini" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-more">
+                    <a href="gallery.html" class="btn btn-primary">Vedi tutte le foto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="contatti">
+        <div class="container">
+            <h2 class="section-title">Contatti</h2>
+
+            <div class="contatti-wrapper">
+                <div class="contatti-info">
+                    <div class="info-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Sede</h4>
+                            <p>Via Teatro 15, 70122 Bari (BA)</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefono</h4>
+                            <p>+39 080 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@teatroreforma.it</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Orari Segreteria</h4>
+                            <p>Lun-Ven: 10:00 - 13:00 / 16:00 - 19:00</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Seguici</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contatti-form">
+                    <h3>Inviaci un messaggio</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nome" name="nome" placeholder="Nome *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Telefono">
+                        </div>
+                        <div class="form-group">
+                            <select id="motivo" name="motivo" required>
+                                <option value="">Motivo del contatto *</option>
+                                <option value="info">Informazioni generali</option>
+                                <option value="laboratorio">Iscrizione laboratorio</option>
+                                <option value="biglietti">Acquisto biglietti</option>
+                                <option value="collaborazione">Proposta collaborazione</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="messaggio" name="messaggio" rows="5" placeholder="Messaggio *"
+                                required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Accetto il trattamento dei dati personali secondo la <a href="#" target="_blank" rel="noopener">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Invia Messaggio</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+
+            <!-- MAPPA -->
+            <div class="map-container">
+                <iframe
+                    src="https://share.google/QtXgdxJPad142q8pV"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    title="Mappa Laboratorio Compagnia Teatrale Reforma">
+                </iframe>
+                <p style="text-align:center; margin-top:8px;">
+                    <a href="https://share.google/QtXgdxJPad142q8pV" target="_blank" rel="noopener">Apri su Google Maps</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Laboratorio Compagnia Teatrale Reforma</h4>
+                    <p>Dal 2005 portiamo il teatro nel cuore della Puglia, con passione, inclusività e innovazione.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Link Rapidi</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#produzioni">Produzioni</a></li>
+                        <li><a href="#eventi">Eventi</a></li>
+                        <li><a href="#progetti">Progetti</a></li>
+                        <li><a href="#chi-siamo">Chi Siamo</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contatti</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i> Via Teatro 15, 70122 Bari</li>
+                        <li><i class="fas fa-phone"></i> +39 080 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@teatroreforma.it</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Resta aggiornato su spettacoli ed eventi</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio Compagnia Teatrale Reforma. Tutti i diritti riservati.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Termini e Condizioni</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" alt="Immagine ingrandita">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Torna su">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="static/JS/script.js"></script>
 </body>
+
 </html>

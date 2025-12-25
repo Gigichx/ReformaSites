@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery - Laboratorio Compagnia Teatrale Reforma" />
+  <title>Gallery | Reforma</title>
+  <link rel="stylesheet" href="static/CSS/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <h1>Reforma</h1>
+          <span>Teatro & Cultura</span>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#produzioni" class="nav-link">Produzioni</a></li>
+          <li><a href="index.html#eventi" class="nav-link">Eventi</a></li>
+          <li><a href="index.html#progetti" class="nav-link">Progetti</a></li>
+          <li><a href="index.html#chi-siamo" class="nav-link">Chi Siamo</a></li>
+          <li><a href="index.html#contatti" class="nav-link">Contatti</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top:90px;">
+    <section class="chi-siamo" style="padding-top:3rem;">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-intro">Una selezione di scatti dai nostri spettacoli, laboratori, eventi e progetti culturali.</p>
+
+        <div class="gallery-section" style="margin-top:2rem;">
+          <div class="gallery-filters">
+            <button class="gallery-filter-btn active" data-filter-gallery="tutti">Tutti</button>
+            <button class="gallery-filter-btn" data-filter-gallery="spettacoli">Spettacoli</button>
+            <button class="gallery-filter-btn" data-filter-gallery="laboratori">Laboratori</button>
+            <button class="gallery-filter-btn" data-filter-gallery="eventi">Eventi</button>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" data-category-gallery="spettacoli">
+              <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&h=800&fit=crop" alt="Spettacolo teatrale" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="laboratori">
+              <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=800&h=800&fit=crop" alt="Laboratorio" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="spettacoli">
+              <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&h=800&fit=crop" alt="Spettacolo bambini" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="eventi">
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=800&fit=crop" alt="Evento piazza" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="spettacoli">
+              <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484ae?w=800&h=800&fit=crop" alt="Romeo e Giulietta" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="laboratori">
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&h=800&fit=crop" alt="Laboratorio bambini" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="eventi">
+              <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop" alt="Teatro popolare" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="spettacoli">
+              <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&h=800&fit=crop" alt="La Locandiera" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="laboratori">
+              <img src="https://images.unsplash.com/photo-1533167649158-6d508895b680?w=800&h=800&fit=crop" alt="Workshop improvvisazione" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-category-gallery="eventi">
+              <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=800&fit=crop" alt="Evento teatrale" loading="lazy" />
+              <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="Immagine ingrandita">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Torna su">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Laboratorio Compagnia Teatrale Reforma</h4>
+          <p>Dal 2005 portiamo il teatro nel cuore della Puglia, con passione, inclusività e innovazione.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Link Rapidi</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#produzioni">Produzioni</a></li>
+            <li><a href="index.html#eventi">Eventi</a></li>
+            <li><a href="index.html#progetti">Progetti</a></li>
+            <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
+            <li><a href="index.html#contatti">Contatti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <ul class="footer-contacts">
+            <li><i class="fas fa-map-marker-alt"></i> Via Teatro 15, 70122 Bari</li>
+            <li><i class="fas fa-phone"></i> +39 080 123 4567</li>
+            <li><i class="fas fa-envelope"></i> info@teatroreforma.it</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Resta aggiornato su spettacoli ed eventi</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="La tua email" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Laboratorio Compagnia Teatrale Reforma. Tutti i diritti riservati.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Termini e Condizioni</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/JS/script.js"></script>
+</body>
+</html>
