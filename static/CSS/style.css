@@ -449,9 +449,17 @@ button {
 .filter-btn { padding: 10px 24px; background: var(--white); color: var(--text-dark); border: 2px solid var(--border-gray); border-radius: 50px; font-weight: 600; transition: var(--transition-smooth); }
 .filter-btn:hover, .filter-btn.active { background: var(--primary-color); color: var(--white); border-color: var(--primary-color); }
 
-.eventi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
+/* Carosello Eventi */
+.eventi-carousel { position: relative; margin-top: 2rem; }
+.eventi-wrapper { overflow: hidden; margin: 0 50px; }
+.eventi-track { display: flex; gap: 2rem; transition: transform 0.5s ease; will-change: transform; }
+.eventi-dots { display: flex; justify-content: center; gap: 10px; margin-top: 2rem; }
 
+/* Card evento (riuso degli stili base) */
 .evento-item { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-smooth); display: flex; flex-direction: column; position: relative; }
+
+/* larghezza slide nel track */
+.eventi-track .evento-item { min-width: calc(33.333% - 1.33rem); }
 .evento-item.hidden { display: none; }
 .evento-item:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
 
@@ -477,9 +485,9 @@ button {
    =================================== */
 .progetti { padding: 5rem 0; background: var(--white); }
 
-.progetti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+.progetti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; align-items: stretch; }
 
-.progetto-card { background: var(--bg-light); border-radius: 12px; padding: 2.5rem 2rem; box-shadow: var(--shadow-sm); transition: var(--transition-smooth); border-left: 4px solid var(--secondary-color); }
+.progetto-card { background: var(--bg-light); border-radius: 12px; padding: 2.5rem 2rem; box-shadow: var(--shadow-sm); transition: var(--transition-smooth); border-left: 4px solid var(--secondary-color); display: flex; flex-direction: column; }
 .progetto-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-left-color: var(--primary-color); }
 
 .progetto-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 1.5rem; }
@@ -628,6 +636,9 @@ button {
     .carousel-wrapper { margin: 0 20px; }
     .event-card { min-width: calc(50% - 1rem); }
 
+    .eventi-wrapper { margin: 0 20px; }
+    .eventi-track .evento-item { min-width: calc(50% - 1rem); }
+
     .contatti-wrapper { grid-template-columns: 1fr; }
 }
 
@@ -637,6 +648,8 @@ button {
     .evento-image { height: 200px; }
     .produzione-image { height: 240px; }
     .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+
+    .eventi-track .evento-item { min-width: 100%; }
 }
 
 @media (max-width: 480px) {

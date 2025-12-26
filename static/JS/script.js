@@ -291,7 +291,8 @@
       const telefono = data.get('telefono').trim();
       const motivo = data.get('motivo');
       const messaggio = data.get('messaggio').trim();
-      const privacy = qs('#privacy').checked;
+      const privacyEl = qs('#privacy');
+      const privacy = privacyEl ? privacyEl.checked : true; // fallback se non presente
 
       let errors = [];
       if (!nome) errors.push('Nome richiesto.');
